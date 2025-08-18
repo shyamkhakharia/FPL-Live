@@ -1,0 +1,13 @@
+name = "fpl-live-worker"
+main = "src/index.js"
+compatibility_date = "2024-09-01"
+usage_model = "unbound"
+workers_dev = true
+
+[vars]
+ALLOWED_ORIGINS = "*"
+CACHE_TTL_SHORT = "30"
+CACHE_TTL_MED = "300"
+CACHE_TTL_LONG = "1800"
+MAX_CONCURRENCY = "8"
+MAX_LEAGUE_MEMBERS_FULL = "75"

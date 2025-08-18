@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+build/
+.out/
+.next/
+.vercel/
+.cache/
+.vite/
+.tmp/
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE settings
+.vscode/
+.idea/
+*.swp
+
+# Cloudflare Wrangler local config
+wrangler.toml.dev
+.dev.vars
+
+# Cloudflare Wrangler local files
+.wrangler/
+
+# Lock files (choose ONE to keep, comment the others)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
