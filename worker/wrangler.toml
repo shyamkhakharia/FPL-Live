@@ -1,6 +1,6 @@
 name = "fpl-live-worker"
 main = "src/router.ts"
-compatibility_date = "2024-09-01"
+compatibility_date = "2024-09-08"
 
 [vars]
 ALLOWED_ORIGINS = "*"
