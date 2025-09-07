@@ -1,5 +1,13 @@
 {
-  "dependencies": {
-    "wrangler": "^4.31.0"
+  "name": "fpl-live-worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^3.80.0",
+    "typescript": "^5.5.4"
   }
 }
