@@ -2,7 +2,7 @@ import { Card, CardContent, Stack, Typography } from '@mui/material'
 import PlayerStatusBadge from './PlayerStatusBadge'
 
 export default function PlayerCard({ slot }: { slot:any }) {
-  const { name, team_short, type, total, projected_points, is_captain, is_vice_captain, multiplier, events = [], on_bench, play_state } = slot
+  const { name, team_short, type, total, projected_points, is_captain, is_vice_captain, multiplier, events = [], on_bench, play_state, bps } = slot
   const points = typeof total === 'number' ? total : (projected_points ?? 0)
   const dim = play_state?.status === 'subbed_off'
   const ribbon = is_captain ? (multiplier === 3 ? 'TC' : 'C') : (is_vice_captain ? 'VC' : null)
@@ -25,6 +25,9 @@ export default function PlayerCard({ slot }: { slot:any }) {
           {events.map((e:string, i:number) => (
             <Typography key={i} variant="caption" sx={{ border: 1, borderColor: 'divider', px: 0.8, py: 0.2, borderRadius: 1 }}>{e}</Typography>
           ))}
+          {typeof bps === 'number' && (
+            <Typography variant="caption" sx={{ border: 1, borderColor: 'divider', px: 0.8, py: 0.2, borderRadius: 1 }}>BPS: {bps}</Typography>
+          )}
         </Stack>
         <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mt: 0.5 }}>x{multiplier || 0} = {points} pts</Typography>
       </CardContent>

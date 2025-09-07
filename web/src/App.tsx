@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Grid, Paper, Stack, TextField, Button, ToggleButton, ToggleButtonGroup, Tabs, Tab, Box } from '@mui/material'
+import { Grid, Paper, Stack, TextField, Button, ToggleButton, ToggleButtonGroup, Tabs, Tab, Box, Typography } from '@mui/material'
 import AppShell from './components/layout/AppShell'
 import { api } from './api/client'
 import SummaryCards from './components/cards/SummaryCards'
@@ -66,6 +66,16 @@ export default function App() {
           <Tab label="Leagues" value="leagues" />
         </Tabs>
       </Stack>
+
+      {/* Team name + Manager name */}
+      {summary && (
+        <Box sx={{ mb: 2 }}>
+          <Typography variant="h6" sx={{ fontWeight: 700 }}>{summary.name}</Typography>
+          <Typography variant="body2" color="text.secondary">
+            {summary.player_first_name} {summary.player_last_name}
+          </Typography>
+        </Box>
+      )}
 
       {tab === 'team' && (
         <Stack spacing={2}>

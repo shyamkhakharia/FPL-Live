@@ -81,6 +81,7 @@ export async function liveManagerHandler(entryId: string, params: Record<string,
       is_captain: !!slot.is_captain,
       is_vice_captain: !!slot.is_vice_captain,
       events: pickEventBadges(proj) || [],
+      bps: proj.bps || 0, // <-- expose live BPS
       play_state: { ...playStateFor(elId, proj.minutes || 0), came_on: slot.position >= 12 && (proj.minutes || 0) > 0 }
     };
 
